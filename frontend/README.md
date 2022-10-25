@@ -1,46 +1,25 @@
-# Getting Started with Create React App and Redux
+# to run API 
+enter api folder and run `npm run dev`
+it only needs a fresh mysql instalation with root account and password as password
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+Open [http://localhost:8081/api/comments](http://localhost:8081/api/comments) to view it in your browser.
+In the frontend directory, you can run:
+GET /api/my-module/ to read all
+GET /api/my-module/read/:id to read one
+POST /api/my-module/create to create
+PATCH /api/my-module/update/:id to update
+DELETE /api/my-module/delete/:id to delete
 
-## Available Scripts
+CREATE VIA POST {
+    "id" : "e40edb86-7538-4c85-b086-d1efa9addbca",
+    "commentText" : "ok2",
+    "childCommments" : "",
+    "isRootNode" : "false",
+    "parentNodeId" : "cf216eda-f0fc-41e1-97c3-ff045fbd958b"
+}
 
-In the project directory, you can run:
-
+#Run in frontend folder 
 ### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
