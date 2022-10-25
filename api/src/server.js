@@ -5,7 +5,7 @@ const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const port = process.env.SERVER_PORT;
 //add new router
-const commentRoutes = require('./modules/comment/routes');
+const commentsRoutes = require('./modules/comments/routes');
 require('./config/database'); 
 
 app.use(cors({
@@ -22,5 +22,5 @@ app.get('/api/', (req, res) => {
    res.send('wellcome to api API')
 })
 //add new route
-app.use('/api/comment', commentRoutes);
+app.use('/api/comments', commentsRoutes);
 app.listen(port, console.log(`server started on port ${port}`));

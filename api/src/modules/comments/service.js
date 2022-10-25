@@ -1,34 +1,35 @@
-const commentQueries = require("./query");
+const commentsQueries = require("./query");
 const { v4: uuidv4 } = require('uuid'); 
 
-const commentService = {
-    creatComment: async (body) => {
-        const id = uuidv4();
-        body.id = id; 
-        return commentQueries.creatComment(body)
+const commentsService = {
+    creatComments: async (body) => {
+        console.log(body)
+        //const id = uuidv4();
+        //body.id = id; 
+        return commentsQueries.creatComments(body)
                 .then((result) => ({status: 201, message: "Creation Success"}))
                 .catch((err) => ({status: 400, message: err}));
     },
-    readComment: async () => {
-        return commentQueries.readComment()
+    readComments: async () => {
+        return commentsQueries.readComments()
                 .then((result) => ({status: 200, data: result}))
                 .catch((err) => ({status: 400, message: err}));
     },
-    readOneComment: async (id) => {
-        return commentQueries.readOneComment(id)
+    readOneComments: async (id) => {
+        return commentsQueries.readOneComments(id)
                 .then((result) => ({status: 200, data: result}))
                 .catch((err) => ({status: 400, message: err}));
     },
-    updateComment: async (id, body) => {
-        return commentQueries.updateComment(id, body)
+    updateComments: async (id, body) => {
+        return commentsQueries.updateComments(id, body)
                 .then((result) => ({status: 201, message: "Update Success"}))
                 .catch((err) => ({status: 400, message: err}));
     },
-    deleteComment: async (id) => {
-        return commentQueries.deleteComment(id)
+    deleteComments: async (id) => {
+        return commentsQueries.deleteComments(id)
                 .then((result) => ({status: 200, message: "Deleted"}))
                 .catch((err) => ({status: 400, message: err}));
     }
 }; 
 
-module.exports = commentService;
+module.exports = commentsService;

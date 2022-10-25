@@ -1,5 +1,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+
+/MDB5-REACT-UI-KIT-Free-4.2.0
 # dependencies
 /node_modules
 /.pnp
